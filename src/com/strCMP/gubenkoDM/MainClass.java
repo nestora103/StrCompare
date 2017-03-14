@@ -22,5 +22,31 @@ public class MainClass {
         //intern() принцип работы.
         // при интернировании преверяем есть ли в пуле строк объект с таким же содержимы, если есть то меняем незаметно старую ссылку на новую в пуле строк
         //если нет в пуле объекта с таким содержимым то переносим текущий интернируемый объект строки в пул и меняем старую ссылку на новую в пуле.
+
+        char c=s1.charAt(0);
+        System.out.println(c);
+
+        int indC=s1.codePointAt(0);
+        System.out.println(indC+""+(char)indC);
+
+        int indRange=s1.codePointCount(0,2);
+        System.out.println(indRange+""+(char)indRange);
+
+        //значение 0, если аргумент является строкой лексически равной данной строке;
+        // значение меньше 0, если аргумент является строкой лексически большей, чем сравниваемая строка;
+        // и значение больше 0, если аргумент является строкой лексически меньшей этой строки.
+        int num=s1.compareTo("CCat");
+        System.out.println(num);
+
+        System.out.println(s1.contentEquals("atC"));
+
+        byte b[]=s1.getBytes();
+        System.out.println(new String(b));
+
+        char cA[]=new char[s1.length()];
+        s1.getChars(0,s1.length(),cA,0);
+        System.out.println(cA);
+
+
     }
 }
